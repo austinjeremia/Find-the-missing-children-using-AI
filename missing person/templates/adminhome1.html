@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+
+.column {
+  float: left;
+  width: 100%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.bac a
+{
+text-decoration: none;
+}
+.bac{
+
+}
+</style>
+</head>
+<body>
+
+<h1 align="center">User Details</h1>
+
+
+
+
+
+
+<div class="row">
+  <div class="column">
+    <table>
+      <tr>
+                 <td height="39" bgcolor="#78BBE6" scope="col" ><div align="center" class="style6">Name</div></td>
+                 <td height="39" bgcolor="#78BBE6" scope="col"><div align="center" class="style6">Gender </div></td>
+                 <td height="39" bgcolor="#78BBE6" scope="col" ><div align="center" class="style6">Age </div></td>
+                 <td height="39" bgcolor="#78BBE6" scope="col" ><div align="center" class="style6">Email </div></td>
+                 <td height="39" bgcolor="#78BBE6" scope="col"><div align="center" class="style6">Mobile</div></td>
+               </tr>
+               {%for item in data%}
+  <tr>
+    <td height="30"><div align="center"><span class="style1">{{item[1]}}</span></div></td>
+    <td><div align="center"><span class="style1">{{item[7]}}</span></div></td>
+    <td><div align="center"><span class="style1">{{item[5]}}</span></div></td>
+    <td><div align="center"><span class="style1">{{item[3]}}</span></div></td>
+    <td><div align="center"><span class="style1">{{item[4]}}</span></div></td>
+  </tr>
+               {%endfor%}
+    </table> </div>
+  <div class="column">
+
+  </div>
+</div>
+<br>
+<br>
+<div align="center"><a style="text-decoration: none; " href="/adminupload" ><h1>upload </h1></a></div>
+<div align="center"><a style="text-decoration: none; " href="/cased" ><h1>Case detail</h1></a></div>
+ <div align="center"><a style="text-decoration: none; " href="/" ><h1>Back</h1></a></div>
+</body>
+</html>
